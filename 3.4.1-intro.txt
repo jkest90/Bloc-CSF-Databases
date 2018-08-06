@@ -1,0 +1,75 @@
+1. What data types do each of these values represent?
+t
+   a. “A Clockwork Orange” - string
+   b. 42 - integer
+   c. 09/02/1945 - date
+   d. 98.7 - float
+   e. $15.99 - price
+
+2. Explain when a database would be used. Explain when a text file would be used.
+   - A data base would be useful when you are storing lots of data with different categories of data types, which would might need to edit, append, remove, or update eventually.
+   - A text file would be useful if you are just looking to display a table of data, but not necessarily alter it significantly in any way.
+
+3.  Describe one difference between SQL and other programming languages.
+   - SQL is a declarative language, rather than a procedural one. This means that we are concerned with WHAT we want to do, not HOW it will be done algorithmically.
+
+4.  In your own words, explain how the pieces of a database system fit together at a high level.
+
+   - Databases contain sets of similarly categorized data, similar to a spreadsheet. They allow us to read, update, edit, and delete specific items from the dataset at will. Similar to an object, each data item can contain different "properties" which have their own unique values. Each value is its own unique data type.
+
+5.  Explain the meaning of table, row, and value.
+
+   - Databases are similar to spreadsheet tables. Each table represents a particular set of data. The table is comprised of rows and columns. The column represents the category of data being stored, and the row represents a single set of data. The row is comprised of "cells" in the table which contains a value, which is a piece of information that the column describes.
+
+6.  List three data types that can be used in a table.
+
+   - integer
+   - string
+   - date
+
+7.  Given this payments table, provide an English description of the following queries include their results results:
+
+     SELECT date, amount
+
+     FROM payments;
+
+     -> Choose the date and amount columns from the payments database.
+
+
+     SELECT amount
+
+     FROM payments
+
+     WHERE amount > 500;
+
+     -> Choose the amounts less than 500 from the payments database.
+
+
+     SELECT  *
+
+     FROM payments
+
+     WHERE payee = ‘Mega Foods’;
+
+     -> Select everything from the payments database where the payee is equal to 'Mega Foods'.
+
+8.  Given this users table, write SQL queries using the following criteria and include the
+     output:
+
+      a. The email and sign-up date from the user named DeAndre Data.
+
+        SELECT email, sign-up
+        FROM users
+        WHERE user = 'DeAndre Data';
+
+      b. The user ID for the user with email ‘alessia.algorithm@uw.edu’.
+
+        SELECT userId
+        FROM users
+        WHERE email = 'alessia.algorithm@uw.edu';
+
+      c. All the columns for the user ID equal to 4.
+
+        SELECT *
+        FROM users
+        WHERE userId = 4;
